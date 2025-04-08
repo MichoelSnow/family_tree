@@ -1,0 +1,816 @@
+[
+    {
+        "id": "0",
+        "rels": {
+            "mother": "16",
+            "father": "29",
+            "spouses": [
+                "28"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "james",
+            "last name": "lewkowicz",
+            "birthday": "1948-10-26",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "4",
+        "rels": {
+            "mother": "10",
+            "father": "8"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "joseph",
+            "last name": "fein",
+            "birthday": "1991-04-29",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "6",
+        "rels": {
+            "mother": "69",
+            "father": "37"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "ivan",
+            "last name": "rokeach",
+            "birthday": "1953-11-24",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "7",
+        "rels": {
+            "mother": "69",
+            "father": "37"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "deborah",
+            "last name": "rokeach",
+            "birthday": "1956-07-17",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "8",
+        "rels": {
+            "children": [
+                "4",
+                "26",
+                "93"
+            ],
+            "mother": "69",
+            "father": "37",
+            "spouses": [
+                "10"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "joseph",
+            "last name": "rokeach",
+            "birthday": "1944-01-16",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "9",
+        "rels": {
+            "mother": "48",
+            "father": "59"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "valerie",
+            "last name": "lubotzky",
+            "birthday": "1959-10-28",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "10",
+        "rels": {
+            "children": [
+                "4",
+                "26",
+                "93"
+            ],
+            "mother": "16",
+            "father": "29",
+            "spouses": [
+                "8"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "teri",
+            "last name": "lewkowicz",
+            "birthday": "1945-03-22",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "11",
+        "rels": {
+            "children": [
+                "99"
+            ],
+            "spouses": [
+                "59"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "john",
+            "last name": "lubotzky",
+            "birthday": "1882-03-10",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "13",
+        "rels": {
+            "mother": "22",
+            "father": "29"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "mike",
+            "last name": "lewkowicz",
+            "birthday": "1915-07-30",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "15",
+        "rels": {
+            "children": [
+                "67",
+                "18",
+                "46",
+                "44",
+                "51"
+            ],
+            "spouses": [
+                "48"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "john",
+            "last name": "lemel",
+            "birthday": "1883-05-09",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "16",
+        "rels": {
+            "children": [
+                "10",
+                "0"
+            ],
+            "spouses": [
+                "29"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "carrie",
+            "last name": "lewkowicz",
+            "birthday": "1888-08-24",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "18",
+        "rels": {
+            "children": [
+                "81",
+                "42",
+                "28",
+                "54",
+                "39",
+                "41"
+            ],
+            "mother": "48",
+            "father": "15",
+            "spouses": [
+                "61"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "anna",
+            "last name": "lemel",
+            "birthday": "1906-12-14",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "21",
+        "rels": {
+            "children": [
+                "32"
+            ],
+            "spouses": [
+                "51"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "albert",
+            "last name": "bohm",
+            "birthday": "1911-02-18",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "22",
+        "rels": {
+            "children": [
+                "24",
+                "86",
+                "13"
+            ],
+            "spouses": [
+                "29"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "emma",
+            "last name": "lewkowicz",
+            "birthday": "1886-04-05",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "23",
+        "rels": {
+            "mother": "69",
+            "father": "37"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "sarah",
+            "last name": "rokeach",
+            "birthday": "1977-09-21",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "24",
+        "rels": {
+            "mother": "22",
+            "father": "29",
+            "spouses": [
+                "85"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "john",
+            "last name": "lewkowicz",
+            "birthday": "1908-07-01",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "26",
+        "rels": {
+            "mother": "10",
+            "father": "8"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "earl",
+            "last name": "fein",
+            "birthday": "1984-03-27",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "28",
+        "rels": {
+            "mother": "18",
+            "father": "61",
+            "spouses": [
+                "80"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "mary",
+            "last name": "perski",
+            "birthday": "1941-08-18",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "29",
+        "rels": {
+            "children": [
+                "10",
+                "0"
+            ],
+            "spouses": [
+                "16"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "alfred",
+            "last name": "lewkowicz",
+            "birthday": "1893-08-24",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "31",
+        "rels": {
+            "spouses": [
+                "50"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "karol",
+            "last name": "roseman",
+            "birthday": "1935-12-14",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "32",
+        "rels": {
+            "mother": "51",
+            "father": "21"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "john",
+            "last name": "bohm",
+            "birthday": "1966-07-03",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "33",
+        "rels": {
+            "mother": "48",
+            "father": "59"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "brenda",
+            "last name": "lubotzky",
+            "birthday": "1953-12-09",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "37",
+        "rels": {
+            "children": [
+                "7",
+                "97",
+                "83",
+                "6",
+                "8",
+                "23",
+                "80"
+            ],
+            "spouses": [
+                "69"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "elmer",
+            "last name": "rokeach",
+            "birthday": "1907-08-20",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "39",
+        "rels": {
+            "mother": "61",
+            "father": "18"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "jeanette",
+            "last name": "perski",
+            "birthday": "1933-10-22",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "41",
+        "rels": {
+            "mother": "18",
+            "father": "61"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "darlene",
+            "last name": "perski",
+            "birthday": "1968-08-05",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "42",
+        "rels": {
+            "mother": "18",
+            "father": "61"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "charles",
+            "last name": "perski",
+            "birthday": "1933-07-07",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "44",
+        "rels": {
+            "mother": "48",
+            "father": "15"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "frank",
+            "last name": "lemel",
+            "birthday": "1905-01-22",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "46",
+        "rels": {
+            "mother": "48",
+            "father": "15"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "elbert",
+            "last name": "lemel",
+            "birthday": "1907-05-03",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "48",
+        "rels": {
+            "children": [
+                "67",
+                "18",
+                "46",
+                "44",
+                "51"
+            ],
+            "spouses": [
+                "15"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "ella",
+            "last name": "lubotzky",
+            "birthday": "1891-09-10",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "50",
+        "rels": {
+            "mother": "89",
+            "father": "22",
+            "spouses": [
+                "31"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "harry",
+            "last name": "lewkowicz",
+            "birthday": "1935-11-17",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "51",
+        "rels": {
+            "children": [
+                "32"
+            ],
+            "mother": "48",
+            "father": "15",
+            "spouses": [
+                "21"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "edna",
+            "last name": "lemel",
+            "birthday": "1905-03-30",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "54",
+        "rels": {
+            "mother": "18",
+            "father": "61"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "charles",
+            "last name": "perski",
+            "birthday": "1929-08-30",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "59",
+        "rels": {
+            "children": [
+                "99"
+            ],
+            "spouses": [
+                "11"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "alvin",
+            "last name": "lubotzky",
+            "birthday": "1885-01-11",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "61",
+        "rels": {
+            "children": [
+                "81",
+                "42",
+                "28",
+                "54",
+                "39",
+                "41"
+            ],
+            "spouses": [
+                "18"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "annie",
+            "last name": "perski",
+            "birthday": "1899-04-23",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "67",
+        "rels": {
+            "mother": "48",
+            "father": "15"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "lillian",
+            "last name": "lemel",
+            "birthday": "1905-02-06",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "69",
+        "rels": {
+            "children": [
+                "7",
+                "97",
+                "83",
+                "6",
+                "8",
+                "23",
+                "80"
+            ],
+            "spouses": [
+                "37"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "anne",
+            "last name": "rokeach",
+            "birthday": "1900-01-01",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "74",
+        "rels": {
+            "mother": "48",
+            "father": "59"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "paul",
+            "last name": "lubotzky",
+            "birthday": "1967-06-21",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "75",
+        "rels": {
+            "mother": "48",
+            "father": "59"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "robert",
+            "last name": "lubotzky",
+            "birthday": "1953-12-28",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "80",
+        "rels": {
+            "mother": "69",
+            "father": "37",
+            "spouses": [
+                "28"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "geraldine",
+            "last name": "rokeach",
+            "birthday": "1936-11-27",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "81",
+        "rels": {
+            "mother": "61",
+            "father": "18"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "mary",
+            "last name": "perski",
+            "birthday": "1929-05-02",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "83",
+        "rels": {
+            "mother": "69",
+            "father": "37"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "barbara",
+            "last name": "rokeach",
+            "birthday": "1942-10-20",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "85",
+        "rels": {
+            "spouses": [
+                "24"
+            ]
+        },
+        "data": {
+            "gender": "M",
+            "first name": "hannah",
+            "last name": "horowitz",
+            "birthday": "1906-04-14",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "86",
+        "rels": {
+            "mother": "22",
+            "father": "29"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "john",
+            "last name": "lewkowicz",
+            "birthday": "1910-08-17",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "89",
+        "rels": {
+            "children": [
+                "96",
+                "50"
+            ],
+            "spouses": [
+                "22"
+            ]
+        },
+        "data": {
+            "gender": "F",
+            "first name": "cora",
+            "last name": "lewkowicz",
+            "birthday": "1884-05-13",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "90",
+        "rels": {
+            "mother": "48",
+            "father": "59"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "maria",
+            "last name": "lubotzky",
+            "birthday": "1967-06-23",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "93",
+        "rels": {
+            "mother": "10",
+            "father": "8"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "lisa",
+            "last name": "fein",
+            "birthday": "1993-10-18",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "96",
+        "rels": {
+            "mother": "22",
+            "father": "89"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "roger",
+            "last name": "lewkowicz",
+            "birthday": "1943-06-24",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "97",
+        "rels": {
+            "mother": "69",
+            "father": "37"
+        },
+        "data": {
+            "gender": "M",
+            "first name": "robert",
+            "last name": "rokeach",
+            "birthday": "1948-05-23",
+            "avatar": ""
+        }
+    },
+    {
+        "id": "99",
+        "rels": {
+            "mother": "11",
+            "father": "59"
+        },
+        "data": {
+            "gender": "F",
+            "first name": "ruby",
+            "last name": "lubotzky",
+            "birthday": "1911-04-19",
+            "avatar": ""
+        }
+    }
+]
