@@ -29,7 +29,7 @@ export function createForm({datum, store, fields, postSubmit, addRelative, delet
     type: 'switch',
     label: 'Gender',
     initial_value: datum.data.gender,
-    options: [{value: 'M', label: 'Male'}, {value: 'F', label: 'Female'}]
+    options: [{value: 'M', label: 'Male'}, {value: 'F', label: 'Female'}, {value: 'N', label: 'Nonbinary'}]
   }
 
   fields.forEach(d => {

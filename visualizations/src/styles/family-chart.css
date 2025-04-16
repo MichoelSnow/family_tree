@@ -1,6 +1,7 @@
 .f3 {
   --female-color: rgb(196, 138, 146);
   --male-color: rgb(120, 159, 172);
+  --nonbinary-color: rgb(156, 129, 209);
   --background-color: rgb(33, 33, 33);
 
   font-family: 'Roboto', sans-serif;
@@ -25,6 +26,9 @@
 }
 .f3 rect.card-male, .f3 .card-male .card-body-rect, .f3 .card-male .text-overflow-mask {
   fill: var(--male-color);
+}
+.f3 rect.card-nonbinary, .f3 .card-nonbinary .card-body-rect, .f3 .card-nonbinary .text-overflow-mask {
+  fill: var(--nonbinary-color);
 }
 .f3 .card-genderless .card-body-rect, .f3 .card-genderless .text-overflow-mask {
   fill: lightgray;
@@ -371,6 +375,9 @@
 .f3 div.card-male .card-inner, .f3 div.card-male .person-icon svg {
   background-color: var(--male-color);
 }
+.f3 div.card-nonbinary .card-inner, .f3 div.card-nonbinary .person-icon svg {
+  background-color: var(--nonbinary-color);
+}
 .f3 div.card-genderless .card-inner, .f3 div.card-genderless .person-icon svg {
   background-color: lightgray;
 }
@@ -404,6 +411,10 @@
 .f3 div.card-new-rel.card-male .card-inner, .f3 div.card-to-add.card-male .card-inner {
   color: var(--male-color);
   border-color: var(--male-color);
+}
+.f3 div.card-new-rel.card-nonbinary .card-inner, .f3 div.card-to-add.card-nonbinary .card-inner {
+  color: var(--nonbinary-color);
+  border-color: var(--nonbinary-color);
 }
 
 .f3 div.card:hover > div {

@@ -96,6 +96,7 @@ export function CardHtml(props) {
     const class_list = []
     if (d.data.data.gender === 'M') class_list.push('card-male')
     else if (d.data.data.gender === 'F') class_list.push('card-female')
+    else if (d.data.data.gender === 'N') class_list.push('card-nonbinary')
     else class_list.push('card-genderless')
 
     if (d.data.main) class_list.push('card-main')
