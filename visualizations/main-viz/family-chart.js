@@ -45,10 +45,7 @@ function create(data) {
         .setEditFirst(true)
         .setOnChange(() => {
             // Save data whenever changes occur
-            // console.log(f3Chart.getMainDatum())
-            // saveData(f3Chart.getMainDatum());
-            // saveData(f3Chart.getDataJson());
-            saveData(f3EditTree.getStoreData());
+            saveData(f3Chart.store.getData());
         })
 
     f3EditTree.setEdit()
