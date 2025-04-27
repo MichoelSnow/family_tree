@@ -42,10 +42,11 @@ function create(data) {
     const f3EditTree = f3Chart.editTree()
         .fixed(true)
         .setFields(["first name", "last name", "birthday", "avatar"])
-        .setEditFirst(true)
+        .setEditFirst(false)
+        // .setEditFirst(true)
         .setOnChange(() => {
             // Save data whenever changes occur
-            saveData(f3Chart.store.getData());
+            saveData(f3EditTree.getStoreData());
         })
 
     f3EditTree.setEdit()
