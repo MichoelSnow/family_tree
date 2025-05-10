@@ -167,8 +167,8 @@ def generate_relationship(
     relationship_dict = {
         "type": relationship_type,
         "subtype": relationship_subtype,
-        "start_date": start_datetime,
-        "end_date": end_datetime,
+        "date_start": start_datetime,
+        "date_end": end_datetime,
     }
     return relationship_dict
 
@@ -180,8 +180,8 @@ def find_partnerships(
         df_relationships["type"] == "partnership"
     ].iterrows():
         # Let's put bounds that they get married sometime between the age of 19 and 70
-        starter_birth_date_upper = val.start_date - datetime.timedelta(days=19 * 365)
-        starter_birth_date_lower = val.start_date - datetime.timedelta(days=70 * 365)
+        starter_birth_date_upper = val.date_start - datetime.timedelta(days=19 * 365)
+        starter_birth_date_lower = val.date_start - datetime.timedelta(days=70 * 365)
         eligible_starter = df_people.loc[
             (df_people["date_of_birth"] <= starter_birth_date_upper)
             & (df_people["date_of_birth"] >= starter_birth_date_lower)
@@ -196,12 +196,12 @@ def find_partnerships(
             )
             ineligible_ids = df_ineligible.loc[
                 (
-                    (df_ineligible["start_date"] <= val.start_date)
-                    & (df_ineligible["end_date"] >= val.start_date)
+                    (df_ineligible["date_start"] <= val.date_start)
+                    & (df_ineligible["date_end"] >= val.date_start)
                 )
                 | (
-                    (df_ineligible["start_date"] >= val.start_date)
-                    & (df_ineligible["start_date"] <= val.end_date)
+                    (df_ineligible["date_start"] >= val.date_start)
+                    & (df_ineligible["date_start"] <= val.date_end)
                 ),
                 "people_id",
             ].tolist()
@@ -227,7 +227,7 @@ def find_partnerships(
             eligible_partners = df_people.loc[
                 (df_people["date_of_birth"] <= birth_range_upper)
                 & (df_people["date_of_birth"] >= birth_range_lower)
-                #                 & (df_people["date_of_death"] > val.end_date)
+                #                 & (df_people["date_of_death"] > val.date_end)
                 & (df_people["id"] != partner_1_id)
                 & (~df_people["id"].isin(ineligible_ids))
             ]
@@ -285,10 +285,10 @@ def find_children(
         ].tolist()
 
         partnership_start = df_relationships.loc[
-            df_relationships["id"] == partnership_id, "start_date"
+            df_relationships["id"] == partnership_id, "date_start"
         ].iloc[0]
         partnership_end = df_relationships.loc[
-            df_relationships["id"] == partnership_id, "end_date"
+            df_relationships["id"] == partnership_id, "date_end"
         ].iloc[0]
         possible_children_ids = df_people.loc[
             (~df_people["id"].isin(parent_ids))
@@ -465,8 +465,9 @@ def prune_tree(
     return df_people, df_relationships, df_relationships_people
 
 
-def convert_format(df_people, df_relationships_people):
+def convert_format_deprecated(df_people, df_relationships_people):
     # Convert the data into the json format used by the family chart visualization
+    # this version required one parent to be the mother and one to be the father
 
     parent_ids = df_relationships_people.loc[
         df_relationships_people["title"] == "parent", "people_id"
@@ -551,6 +552,83 @@ def convert_format(df_people, df_relationships_people):
                 raise e
             df_tmp["rels"]["mother"] = str(mother_id)
             df_tmp["rels"]["father"] = str(father_id)
+
+        if people["id"] in partner_ids:
+            relationship_id = df_relationships_people.loc[
+                (df_relationships_people["people_id"] == people["id"])
+                & (df_relationships_people["title"] == "partner"),
+                "relationship_id",
+            ].tolist()[0]
+            partners = df_relationships_people.loc[
+                (df_relationships_people["relationship_id"] == relationship_id)
+                & (df_relationships_people["title"] == "partner")
+                & (df_relationships_people["people_id"] != people["id"]),
+                "people_id",
+            ].tolist()
+            df_tmp["rels"]["spouses"] = [str(x) for x in partners]
+
+        data_output.append(df_tmp)
+    return data_output
+
+
+def convert_format(df_people, df_relationships_people):
+    # Convert the data into the json format used by the family chart visualization
+    # this version required one parent to be the mother and one to be the father
+
+    parent_ids = df_relationships_people.loc[
+        df_relationships_people["title"] == "parent", "people_id"
+    ].tolist()
+    children_ids = df_relationships_people.loc[
+        df_relationships_people["title"] == "child", "people_id"
+    ].tolist()
+    partner_ids = df_relationships_people.loc[
+        df_relationships_people["title"] == "partner", "people_id"
+    ].tolist()
+    data_output = []
+    for _, people in df_people.iterrows():
+        # print(people["id"])
+        if people["gender"] not in ["male", "female"]:
+            gender = random.sample(["M", "F"], k=1)[0]
+        else:
+            gender = people["gender"][0].upper()
+        df_tmp = {
+            "id": str(people["id"]),
+            "rels": {},
+            "data": {
+                "gender": gender,
+                "first name": people["first_name"],
+                "last name": people["last_name"],
+                "birthday": people["date_of_birth"].isoformat(),
+                "avatar": "",
+            },
+        }
+
+        if people["id"] in parent_ids:
+            relationship_id = df_relationships_people.loc[
+                (df_relationships_people["people_id"] == people["id"])
+                & (df_relationships_people["title"] == "parent"),
+                "relationship_id",
+            ].tolist()[0]
+            children = df_relationships_people.loc[
+                (df_relationships_people["relationship_id"] == relationship_id)
+                & (df_relationships_people["title"] == "child"),
+                "people_id",
+            ].tolist()
+            df_tmp["rels"]["children"] = [str(x) for x in children]
+
+        if people["id"] in children_ids:
+            relationship_id = df_relationships_people.loc[
+                (df_relationships_people["people_id"] == people["id"])
+                & (df_relationships_people["title"] == "child"),
+                "relationship_id",
+            ].tolist()[0]
+            parents = df_relationships_people.loc[
+                (df_relationships_people["relationship_id"] == relationship_id)
+                & (df_relationships_people["title"] == "parent"),
+                "people_id",
+            ].tolist()
+            df_tmp["rels"]["parents"] = [str(x) for x in parents]
+
 
         if people["id"] in partner_ids:
             relationship_id = df_relationships_people.loc[
